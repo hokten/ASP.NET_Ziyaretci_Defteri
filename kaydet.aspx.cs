@@ -20,7 +20,7 @@ public partial class kaydet : System.Web.UI.Page
         string b_metni = WebConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection baglanti = new SqlConnection(b_metni);
 
-        // Komut nesnesi
+        // Komut nesnesi eklendi
         string sql = "INSERT INTO mesajlar (mesaj_yazan, mesaj_baslik, mesaj, mesaj_tarihi) ";
         sql += "VALUES(@yazar, @baslik, @mesaj, @tarih)";
         SqlCommand sql_komutu = new SqlCommand(sql, baglanti);
